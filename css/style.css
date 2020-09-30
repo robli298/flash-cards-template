@@ -1,0 +1,121 @@
+/*
+    Dark blue: #2ca4dd
+    Mid Blue: #56b6e4
+    Light Blue: #80c8eb
+
+    Light Grey: #e6e6e6
+    Dark Grey: #b3b3b3
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #b3b3b3;
+}
+
+.header {
+    display: flex;
+    height: 12vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(127, 199, 235, 0.8),
+        rgba(44, 164, 221, 0.8)
+    );
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-logo-box {
+    padding: 0px 0px 0px 10px;
+}
+
+.logo {
+    height: 6vh;
+    animation: moveInLeft 2s ease-out;
+}
+
+.header a, li, button {
+    text-decoration: none;
+    color: white;
+}
+
+.header-actions-box li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.header-actions-box li a {
+    transition: all 0.3s ease 0s;
+}
+
+.header-actions-box li a:hover {
+    color: #e6e6e6;
+}
+.header-auth-box {
+    margin-left: auto;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-search {
+    background-color: transparent;
+}
+
+.btn-login {
+    background-color: transparent;
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn-login:active {
+   transform: translateY(-1px);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn-signup {
+    background-color: rgba(60, 207, 207);
+    margin-right: 30px;
+}
+
+.btn-signup:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn-signup:active{
+   transform: translateY(-1px);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
